@@ -19,6 +19,7 @@ app.use("/",index);
 const indexpost=require("./routes/master.js");
 app.use("/",indexpost);
 
+// listening to port
 app.listen(port,(req,res)=>{
     console.log("Server has started\n");
 });

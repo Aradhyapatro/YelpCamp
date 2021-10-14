@@ -1,13 +1,25 @@
 <%- include("templates/header")%>
-<a href="/campground/new">Add new Camp Sites to our YelpCamp Organization</a>
-<ul>
-    <% for(let i=0;i< camp.length;i++){ %> 
-        <li>
-                <h1><%= camp[i].name%></h1>
-                <img src="<%= camp[i].img%>" alt="campsite">
-        </li>
-    <% } %>
-</ul>
 
+<div class="container">
+    <header class="jumbotron rounded">
+        <h1 class="text-center jumbotron">Welcome to YelpCamp</h1>
+        <p class="text-end ptag">- View our hand-picked Camp Grounds all around the World</p>
+        <a href="/campground/new"><button type="button" class="btn bluesteel">Add new Camp Sites to our YelpCamp Organization</button></a>
+    </header>
+
+
+    <div class="row justify-content-center">
+        <% for(let i=0;i< camp.length;i++){ %> 
+            <div class="col-lg-3 col-md-6 col-sm-12 block">
+                    <div class="img-thumbnail rounded align-self-center">    
+                        <img src="<%= camp[i].img%>" alt="campsite">
+                        <div class="caption">
+                            <p class="text-center" style="margin-bottom: 25px;"><%= camp[i].name%></>
+                        </div>
+                    </div>
+            </div>
+        <% } %>
+    </div>
+</div>
 <%- include("templates/footer")%>
 
