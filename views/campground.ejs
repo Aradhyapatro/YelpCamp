@@ -1,0 +1,12 @@
+<%- include("templates/header")%>
+<ul>
+    <% for(let i=0;i< camp.length;i++){ %> 
+        <li>
+                <h1><%= camp[i].name%></h1>
+                <img src="<%= camp[i].img%>" alt="campsite">
+        </li>
+    <% } %>
+</ul>
+
+<%- include("templates/footer")%>
+
