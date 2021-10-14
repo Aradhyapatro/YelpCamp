@@ -1,0 +1,14 @@
+<%- include("templates/header")%>
+<h1>Create new CampGrounds</h1>
+<form action="/campground" method="post">
+    <label for="name">Name of CampSite</label>
+    <input type="text" name="name" autocomplete="off">
+
+    <label for="name">URL of images of CampSite</label>
+    <input type="text" name="URL">
+
+    <button type="submit">submit</button>
+</form>
+<h3><a href="/campground">Go Back</a></h3>
+
+<%- include("templates/footer")%>

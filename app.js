@@ -12,12 +12,12 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname,"/public")));
 
 // Get Requests
-const get=require("./routes/get.js");
-app.use("/",get);
+const index=require("./routes/main.js");
+app.use("/",index);
 
 // Post Requests
-const post=require("./routes/post.js");
-app.use("/",post);
+const indexpost=require("./routes/master.js");
+app.use("/",indexpost);
 
 app.listen(port,(req,res)=>{
     console.log("Server has started\n");
